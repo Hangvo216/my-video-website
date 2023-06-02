@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import VideoItem from '../components/VideoItem';
 
 const HomePage = () => {
- const [videos, setVideos] = useState([]);
+ const [videos, setVideos] = useState<any[]>([]);
  useEffect(() => {
   fetch('http://localhost:5000/api/videos')
     .then((response) => response.json())
@@ -62,7 +62,7 @@ const HomePage = () => {
          <main>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           {videos.map((video) => (
-            <VideoItem key={video.id} video={video} />
+            <VideoItem key={video.id}  video={video} />
           ))}
         </div>
       </main>
