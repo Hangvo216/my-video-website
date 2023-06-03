@@ -30,5 +30,16 @@ def get_videos():
     ]
     return jsonify(videos)
 
+
+@app.route('/api/data', methods=['GET'])
+def get_data():
+    # Logic to retrieve videos from a database or other data source
+    # Return a JSON response with the retrieved videos
+    videos =    {
+            'name': 'backend'
+        },
+
+    return jsonify(videos)
+
 if __name__ == '__main__':
     app.run(debug=True)
