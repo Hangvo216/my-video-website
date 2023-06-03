@@ -11,7 +11,7 @@ const HomePage = () => {
     .catch((error) => console.error('Error fetching videos:', error));
 
 
-  fetch('http://localhost:5000/api/data')
+  fetch(`${window.location.origin}/api/data`)
     .then((response) => response.json())
     .then((a) => {
         setData(a)
