@@ -5,7 +5,7 @@ const HomePage = () => {
  const [videos, setVideos] = useState<any[]>([]);
  const [data, setData] = useState<any[]>([]);
  useEffect(() => {
-  fetch('http://localhost:5000/api/videos')
+  fetch('/api/videos')
     .then((response) => response.json())
     .then((data) => setVideos(data))
     .catch((error) => console.error('Error fetching videos:', error));
